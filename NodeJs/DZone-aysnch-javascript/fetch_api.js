@@ -14,6 +14,7 @@ The fetch API simply returns a Promise and hence we can implement handlers
 to process the response from the Promise. Based on whether the Promise
 resolves or rejects, we can handle that with JavaScript's  then() method.
 */
+const fetch = require('node-fetch') // only when running in Node.js
 
 fetch('http://puzzle.mead.io/puzzle', {}).then((response) => {
 
@@ -28,6 +29,7 @@ fetch('http://puzzle.mead.io/puzzle', {}).then((response) => {
     throw new Error('Unable to fetch the puzzle');
   }
 }).then((data) => {
+  console.log(data)
   console.log(data.puzzle);
 }).catch((error) => {
   console.log(error);
