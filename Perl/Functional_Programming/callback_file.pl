@@ -75,10 +75,14 @@ my $eval_ret =
 eval {
   my $file = 'not_available';
   
-  $save_file->({file => $file, mode => '>>', data => "Hello Jürgen\n" }, 
+  my @data = ("Hello\n", "Du da\n");
+
+  $save_file->({file => $file, mode => '>>', data => @data }, 
     sub {
       my ($fh, $data) = @_;
-      return print $fh $data;
+      my $text = qq|Neuer Text\nNeue Zeile\n|;
+      print $fh $text;
+      return print $fh @data;
     }
   );
 
