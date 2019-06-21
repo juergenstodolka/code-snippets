@@ -2,6 +2,8 @@ use strict;
 use warnings;
 
 use Data::Dumper;
+use FindBin qw($Bin);
+use lib "$Bin";  # get absolute path o subdirectory 'lib'
 
 use ArrayUtils;
 
