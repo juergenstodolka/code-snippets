@@ -26,5 +26,6 @@ const pickNamesInUpperCaseOfLength_Arrow = function(names, length) {
         .join(', ');
            
 };
+
 const hits_Arrow = pickNamesInUpperCaseOfLength_Arrow(words, 5);
 console.log(hits_Arrow);
