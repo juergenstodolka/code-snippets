@@ -1,0 +1,8 @@
+Reading From Streams
+
+The best way to read data from a stream is to listen to data event and attach a callback. 
+When a chunk of data is available, the readable stream emits a data event and your callback executes.
+
+Take a look at the following snippet:
+
+Dies Datei enthält auch deutsche Umlaute, sooo schöön, daß das auch geht!
