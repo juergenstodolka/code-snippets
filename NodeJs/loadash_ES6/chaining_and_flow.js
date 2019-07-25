@@ -20,7 +20,7 @@ const loadash_result = _([1, 2, 3])
 .value();
 // [2, 1]
 
-console.log(loadash_result);
+console.log('lodash: ',loadash_result);
 
 // becomes
 
@@ -29,8 +29,8 @@ const pipeline = [
     array => array.reverse()
   ];
   
-const es6_res =  pipeline.reduce((xs, f) => f(xs), [1, 2, 3]);
-console.log(es6_res);
+const es6_res =  pipeline.reduce( (xs, f) => f(xs), [1, 2, 3]);
+console.log('ES6: ', es6_res);
 
 // This way, we don’t even have to think about the difference between tap and thru. 
 // Wrapping this reduction in a utility function makes a great general purpose tool:
