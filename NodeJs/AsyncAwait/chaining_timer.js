@@ -13,6 +13,7 @@ const sleep_3 = () => { return new Promise(resolve => { return setTimeout(resolv
         console.log('After 2 seconds');
         await sleep_3();
         console.log('After 3 seconds');
+        //throw new Error('Buuhuu!');
         await sleep_1();
         console.log('After 1 second');
     }
