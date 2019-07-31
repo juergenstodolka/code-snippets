@@ -7,7 +7,7 @@ const util = require('util');
 // Copy a file using streams
 const pipeline = util.promisify(stram.pipeline);
 
-async function fileCopy() {
+(async () => {
     try {
         await pipeline(
             fs.createReadStream('file.txt'),
@@ -18,6 +18,4 @@ async function fileCopy() {
     catch (err) {
         console.log('Pipline failed', err);
     }
-}
-
-fileCopy();
+})();
