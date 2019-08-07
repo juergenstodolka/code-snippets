@@ -1,11 +1,11 @@
 'use strict';
 
-const stram = require('stream');
+const stream = require('stream');
 const fs = require('fs');
 const util = require('util');
 
 // Copy a file using streams
-const pipeline = util.promisify(stram.pipeline);
+const pipeline = util.promisify(stream.pipeline);
 
 (async () => {
     try {
