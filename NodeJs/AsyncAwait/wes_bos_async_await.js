@@ -44,4 +44,24 @@ const getDetails = async function () {
     }
 }
 
-getDetails();
+//getDetails();
+
+// Create a function without any error handling
+async function yolo () {
+    // Do something that errors out. 
+    const wes = await axios.get('https://no.com');
+}
+
+// make a High Order Function (HOF) to handle that error
+function handleError (fn) {
+    return function (...params) {
+        return fn(...params).catch(function (err) {
+            // do somethign with the error"
+            console.error(`Oops!`, err);
+        });
+    }
+}
+
+// Now wrap function call in a HOF
+//const safeYolo = handleError(yolo);
+//safeYolo();
