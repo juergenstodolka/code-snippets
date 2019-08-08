@@ -1,0 +1,47 @@
+'use strict';
+
+const axios = require('axios');
+
+function sleep (amount) {
+    return new Promise((resolve, reject) => {
+        if (amount < 300) {
+            reject('That is too fast, cool it down!');
+        }
+        setTimeout(() => resolve(`Slept for ${amount}`), amount);
+    });
+}
+
+// Simple call the promise
+sleep(500).then((result) => {
+    console.log(result);
+});
+
+// Define an async function
+async function go () {
+    // just wait
+    await sleep(1000);
+
+    // or capture the returned value
+    const response = await sleep(750);
+    console.log(response);
+}
+
+go();
+
+// make fast search, waiting until both request come back
+const getDetails = async function () {
+    // Fire both off
+    const wesPromise = axios.get('https://api.github.com/users/wesbos');
+    const juergenPromise = axios.get('https://api.github.com/users/juergenstodolka');
+
+    // and wait to both to come back
+    try {
+        const [wes, juergen] = await Promise.all([wesPromise, juergenPromise]);
+        console.log(wes);
+        console.log(juergen);
+    } catch (error) {
+        console.log('Download error:', error);
+    }
+}
+
+getDetails();
