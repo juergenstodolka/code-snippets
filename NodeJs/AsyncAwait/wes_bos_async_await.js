@@ -44,8 +44,9 @@ const getDetails = async function () {
     }
 }
 
-//getDetails();
+//getDetails();´
 
+//-------------------------------------------------------------------
 // Create a function without any error handling
 async function yolo () {
     // Do something that errors out. 
@@ -65,3 +66,14 @@ function handleError (fn) {
 // Now wrap function call in a HOF
 //const safeYolo = handleError(yolo);
 //safeYolo();
+
+//-------------------------------------------------------------------
+// Wrap catch errors in Express routes
+const catchError = (fn) => {
+    return function (req, res, next) {
+        return fn(req, res, next).catch(next);
+    };
+};
+
+// Then wrap the routes
+// router.get('/orders', catchError(getOrders));
