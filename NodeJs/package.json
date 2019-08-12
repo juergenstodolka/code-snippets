@@ -11,6 +11,7 @@
   "dependencies": {
     "chalk": "^2.4.2",
     "commander": "^2.20.0",
+    "highland": "^2.13.5",
     "lodash": "^4.17.14",
     "mocha": "^6.1.4",
     "node-fetch": "^2.3.0",
