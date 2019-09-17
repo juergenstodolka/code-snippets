@@ -17,6 +17,7 @@
     "lodash": "^4.17.14",
     "mocha": "^6.1.4",
     "node-fetch": "^2.3.0",
+    "performance-now": "^2.1.0",
     "ramda": "^0.26.1",
     "zlib": "^1.0.5"
   }
