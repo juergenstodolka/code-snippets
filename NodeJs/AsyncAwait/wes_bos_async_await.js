@@ -29,7 +29,7 @@ async function go () {
     }
 }
 
-// make fast search, waiting until both request come back
+//make fast search, waiting until both request come back
 const getDetails = async function () {
     // Fire both off
     const wesPromise = axios.get('https://api.github.com/users/wesbos');
@@ -45,10 +45,15 @@ const getDetails = async function () {
     }
 }
 
-    (async function () {
-        await go();
-        await getDetails();
-    });
+go();
+
+getDetails().then((result) => {
+    if (result) {
+        console.log("getDetails:", result);
+    }
+}).catch((err) => {
+    console.log("Exception caught:", err);
+});
 
 
 //-------------------------------------------------------------------
