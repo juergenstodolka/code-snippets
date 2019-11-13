@@ -19,14 +19,15 @@ sleep(500).then((result) => {
 // Define an async function
 async function go () {
     // just wait
-    await sleep(1000);
-
-    // or capture the returned value
-    const response = await sleep(750);
-    console.log(response);
+    try {
+        await sleep(100);
+        // or capture the returned value
+        const response = await sleep(750);
+        console.log(response);
+    } catch (error) {
+        console.error('Exeception caught:', error);
+    }
 }
-
-go();
 
 // make fast search, waiting until both request come back
 const getDetails = async function () {
@@ -44,7 +45,11 @@ const getDetails = async function () {
     }
 }
 
-//getDetails();´
+    (async function () {
+        await go();
+        await getDetails();
+    });
+
 
 //-------------------------------------------------------------------
 // Create a function without any error handling
