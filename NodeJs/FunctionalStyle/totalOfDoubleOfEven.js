@@ -13,6 +13,8 @@ for (const number of numbers) {
 console.log(totalOfDoubleOfEven);
 
 console.log('-'.repeat(50));
+console.log('The same');
+console.log('-'.repeat(50));
 
 let compute = function (numbers) {
   return numbers.filter((number) => number % 2 == 0)
