@@ -17,10 +17,14 @@
     "highland": "^2.13.5",
     "lodash": "^4.17.14",
     "mocha": "^6.1.4",
+    "ncu": "^0.2.1",
     "node-fetch": "^2.3.0",
+    "npm-check-updates": "^4.0.1",
     "performance-now": "^2.1.0",
     "pkg": "^4.4.0",
     "ramda": "^0.26.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5",
     "yargs": "^14.2.0",
     "zlib": "^1.0.5"
   }
