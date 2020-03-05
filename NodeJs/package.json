@@ -20,6 +20,7 @@
     "ncu": "^0.2.1",
     "node-fetch": "^2.3.0",
     "npm-check-updates": "^4.0.1",
+    "parse-duration": "^0.1.2",
     "performance-now": "^2.1.0",
     "pkg": "^4.4.0",
     "ramda": "^0.26.1",
