@@ -9,13 +9,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "chai": "^4.2.0",
-    "commander": "^4.1.0",
     "lodash": "^4.17.15"
   },
   "devDependencies": {
     "assertthat": "^5.1.0",
     "mocha": "^7.1.0",
+    "chai": "^4.2.0",
+    "chai-match": "^1.1.1",
+    "chai-string": "^1.5.0",
+    "commander": "^4.1.0",
     "sinon": "^9.0.0"
   }
 }
