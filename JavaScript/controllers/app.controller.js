@@ -10,6 +10,6 @@ module.exports = {
       return res.send("Hey");
     }
 
-    res.send("Ooops. You need to log in ti access this page");
+    res.send("Ooops. You need to log in to access this page");
   }
 }
