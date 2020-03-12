@@ -21,7 +21,7 @@ sub select_any_name {
 sub multiple_words_in_string {
   my ($track) = @_;
 
-  return $track =~ /Das Wetter ist (toll|richtig schlecht)/;
+  return $track =~ /Ba(na){2,5}ne/;
 }
 
 
@@ -45,10 +45,11 @@ subtest 'Regular Expression using brackets with alternative strings' => sub {
 
 
 subtest 'Regular Expression using brackets/multiple occurence' => sub {
-  plan tests => 1;
+  plan tests => 3;
 
-  is(multiple_words_in_string('Marius Osterhase'), 1,'multipel sub strings');
-  
+  is(multiple_words_in_string('Bananane'), 1,'multiple sub strings');
+  is(multiple_words_in_string('Banananane'), 1,'multiple sub strings');  
+  isnt(multiple_words_in_string('Banane'), 1,'no multiple sub strings');  
 };
 
 1;
