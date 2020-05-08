@@ -38,4 +38,10 @@ my $result =  compute(@numbers)->();
 
 print qq|Result=$result\n|;
 
+# Alternatively
+my $mod2_doubled_sum = compute(@numbers);
+my $result2 = $mod2_doubled_sum->();
+
+print qq|Result=$result2\n|;
+
 1;
