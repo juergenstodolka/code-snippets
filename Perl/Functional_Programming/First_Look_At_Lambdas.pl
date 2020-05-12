@@ -23,6 +23,29 @@ sub apply {
     return ($val, $first->($val));                        ## base case
 }
 
+sub apply_non_recursive {
+    my ($val, $first, @rest) = @_;
+ #   trace($val, $first, @rest) if 1;  ## 0 to stop tracing
+
+    my @complete;
+    push @complete, $val;
+
+    my $result = $first->($val);
+    push @complete, $result;
+
+    return $result if ( scalar @complete == 0 );
+
+    foreach my $func (@rest) {
+       my $last    = $result; 
+       my $current = $func->($last);
+       push @complete, $current;
+       $result = $current;
+    }
+
+   return @complete;
+}
+
+
 my $init_val = 0;
 my @ops = (                        ## list of lambda references
     $inc, $dec, $dec, $inc,
@@ -34,3 +57,5 @@ my @ops = (                        ## list of lambda references
 ## Execute.
 print join(' ', apply($init_val, @ops)), "\n";
 ## Final line of output: 0 1 0 -1 0 1 2 3 2 2 1 0 0 0 1 2 2
+
+print join(' ', apply_non_recursive($init_val, @ops)), "\n";
