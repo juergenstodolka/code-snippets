@@ -24,11 +24,12 @@ our $create = sub  {
     my $closure = shift;
 
     say qq|Static class method 'create' ...|;
+    die 'First parameter must be a closure!' if (ref($closure) ne 'CODE');
 
-     my $res = Resource->new();
-     $res->open();
-     $closure->($res);
-     return;
+    my $res = Resource->new();
+    $res->open();
+    $closure->($res);
+    return;
 };
 
 
