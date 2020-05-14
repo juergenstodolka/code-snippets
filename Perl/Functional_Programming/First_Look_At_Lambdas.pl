@@ -36,8 +36,7 @@ sub apply_non_recursive {
     return $result if ( scalar @complete == 0 );
 
     foreach my $func (@rest) {
-       my $last    = $result; 
-       my $current = $func->($last);
+       my $current = $func->($result);
        push @complete, $current;
        $result = $current;
     }
@@ -47,15 +46,18 @@ sub apply_non_recursive {
 
 
 my $init_val = 0;
-my @ops = (                        ## list of lambda references
+
+## list of lambda references
+my @ops = (       
     $inc, $dec, $dec, $inc,
     $inc, $inc, $inc, $dec,
     $nop, $dec, $dec, $nop,
     $nop, $inc, $inc, $nop
     );
 
-## Execute.
+## Execute apply (recursive implementation).
 print join(' ', apply($init_val, @ops)), "\n";
 ## Final line of output: 0 1 0 -1 0 1 2 3 2 2 1 0 0 0 1 2 2
 
+## Execute apply_non_recursive (non recursive implementation).
 print join(' ', apply_non_recursive($init_val, @ops)), "\n";
