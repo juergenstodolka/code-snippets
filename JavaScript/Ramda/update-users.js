@@ -34,6 +34,7 @@ const getUsersUser = R.curry(getUser)(users);
 const getHenry = () => getUsersUser("Henry");
 
 const updateHenry = R.pipe(R.curry(updateScore)(getHenry()), updateTries, R.curry(storeUser)(users));
+// Update Henry's score by 120
 const updatedUsers = updateHenry(120);
 
 console.log("User Henry updated", updatedUsers);
