@@ -1,0 +1,16 @@
+{
+  "name": "utf8-fileSystem",
+  "version": "1.0.0",
+  "description": "Rename file with utf8 filename",
+  "main": "fileSystem.js",
+  "bin": "fileSystem.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pkg": "^4.4.0",
+    "yargs": "^14.2.0"
+  }
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+ <!DOCTYPE phrasebook [
+ <!ELEMENT phrasebook (phrasebook)*>
+ <!ELEMENT phrase (#PCDATA)>
+ <!ATTLIST phrase name CDATA #REQUIRED>
+ ]>
+
+
+ <phrasebook>
+
+  <phrase name="UPDATE_T_ACCOUNT">
+    update t_account set
+          login = '$login',
+          description = '$description',
+          dates_id = $dates_id,
+          groups = $groups,
+          owners = $owners
+        where id = $id
+  </phrase>
+
+</phrasebook>

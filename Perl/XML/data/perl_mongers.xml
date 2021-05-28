@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE perl_mongers PUBLIC "-//Perl Mongers//DTD for Perl user groups//EN" "http://www.pm.org/groups/perl_mongers.dtd">
+<!-- This file is maintained by <support@pm.org>
+     https://github.com/perlorg/www.pm.org/blob/master/perl_mongers.xml
+-->
+<perl_mongers>
+  <group id="0" status="active">
+    <!-- new york was the first group -->
+    <name>NY.pm</name>
+    <location>
+      <city>New York City</city>
+      <state>New York</state>
+      <region>Center of the Universe</region>
+      <country>United States of America</country>
+      <continent>North America</continent>
+      <longitude>-73.98771000</longitude>
+      <latitude>40.72426868</latitude>
+    </location>
+    <email type="group">
+      <user>nypm-organizers</user>
+      <domain>googlegroups.com</domain>
+    </email>
+    <tsar>
+      <name>NY.pm Organizers Committee</name>
+      <email type="personal">
+        <user>nypm-organizers</user>
+        <domain>googlegroups.com</domain>
+      </email>
+    </tsar>
+    <web>http://www.meetup.com/The-New-York-Perl-Meetup-Group/</web>
+    <meetup>http://www.meetup.com/The-New-York-Perl-Meetup-Group/</meetup>
+    <mailing_list>
+      <name>General NY.pm discussion</name>
+      <email type="list">
+        <user>ny</user>
+        <domain>lists.panix.com</domain>
+      </email>
+      <email type="list_admin">
+        <user>majordomo</user>
+        <domain>lists.pm.org</domain>
+      </email>
+      <subscribe>subscribe ny email_address</subscribe>
+      <unsubscribe>unsubscribe ny email_address</unsubscribe>
+    </mailing_list>
+    <mailing_list>
+      <name>NYC Perl Jobs</name>
+      <email type="list">
+        <user>nyc-perl-jobs</user>
+        <domain>perl.org</domain>
+      </email>
+      <email type="list_admin">
+        <user>majordomo</user>
+        <domain>perl.org</domain>
+      </email>
+      <subscribe>subscribe nyc-perl-jobs email_address</subscribe>
+      <unsubscribe>unsubscribe nyc-perl-jobs
+      email_address</unsubscribe>
+    </mailing_list>
+    <date type="inception">19970827</date>
+  </group>
+
+   <group id="1" status="left">
+    <!-- new york was the first group -->
+    <name>NY.pm</name>
+    <location>
+      <city>New York City</city>
+      <state>New York</state>
+      <region>Center of the Universe</region>
+      <country>United States of America</country>
+      <continent>North America</continent>
+      <!-- Comment for test
+      <longitude>-73.98771000</longitude>
+      -->
+      <latitude>40.72426868</latitude>
+    </location>
+    <email type="group">
+      <user>nypm-organizers</user>
+      <domain>googlegroups.com</domain>
+    </email>
+    <tsar>
+      <name>NY.pm Organizers Committee</name>
+      <email type="personal">
+        <user>nypm-organizers</user>
+        <domain>googlegroups.com</domain>
+      </email>
+    </tsar>
+    <web>http://www.meetup.com/The-New-York-Perl-Meetup-Group/</web>
+    <meetup>http://www.meetup.com/The-New-York-Perl-Meetup-Group/</meetup>
+    <mailing_list>
+      <name>General NY.pm discussion</name>
+      <email type="list">
+        <user>ny</user>
+        <domain>lists.panix.com</domain>
+      </email>
+      <email type="list_admin">
+        <user>majordomo</user>
+        <domain>lists.pm.org</domain>
+      </email>
+      <subscribe>subscribe ny email_address</subscribe>
+      <unsubscribe>unsubscribe ny email_address</unsubscribe>
+    </mailing_list>
+    <mailing_list>
+      <name>NYC Perl Jobs</name>
+      <email type="list">
+        <user>nyc-perl-jobs</user>
+        <domain>perl.org</domain>
+      </email>
+      <email type="list_admin">
+        <user>majordomo</user>
+        <domain>perl.org</domain>
+      </email>
+      <subscribe>subscribe nyc-perl-jobs email_address</subscribe>
+      <unsubscribe>unsubscribe nyc-perl-jobs
+      email_address</unsubscribe>
+    </mailing_list>
+    <date type="inception">19970827</date>
+  </group>
+
+  </perl_mongers>
