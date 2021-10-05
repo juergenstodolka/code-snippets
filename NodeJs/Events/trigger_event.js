@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /*
     1. Use the require function to include the 'events' module. With this module, you will be able to create events in Node.js.
@@ -6,15 +6,15 @@
     3. We define an event-driven function which says that if in case the "data_received" event is triggered then we should output the text "data_received" to the console.
     4. Finally, we do have a manual trigger of our event using the eventEmiter.emit function. This will trigger the data_received event.
 */
-const events = require('events');
+const events = require("events");
 
 const eventEmitter = new events.EventEmitter();
 
-eventEmitter.on('data_received', function () {
-    console.log('data received succesfully.')
+eventEmitter.on("data_received", function () {
+  console.log("data received succesfully.");
 });
 
-eventEmitter.emit('data_received');
+eventEmitter.emit("data_received");
 
 /*
    1. One time event handlers
@@ -23,10 +23,9 @@ eventEmitter.emit('data_received');
 
    Here we are using the 'once' method to say that for the event 'request' the callback function should only be executed once.
 */
-eventEmitter.once('request', function () {
-    console.log('request received succesfully');
+eventEmitter.once("request", function (counter) {
+  console.log("request received succesfully: " + counter);
 });
 
-eventEmitter.emit('request');
-eventEmitter.emit('request');
-
+eventEmitter.emit("request", 1);
+eventEmitter.emit("request", 2);
