@@ -2,3 +2,6 @@ node_modules
 big.file
 *~
 .vscode
+.zip
+.tar
+.7z
