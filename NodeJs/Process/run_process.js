@@ -1,6 +1,8 @@
 'use strict';
+import { spawn } from 'child_process'
 
-const { spawn } = require('child_process');
+
+//const { spawn } = require('child_process');
 
 /**
  * @param {string} executable
